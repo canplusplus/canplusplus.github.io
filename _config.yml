@@ -1,0 +1,32 @@
+# site settings
+title: Hackbridge
+subtitle: .io
+email: hello@hackbridge.io
+description: Kindling tech entrepreneurship at Cambridge University
+url: "" # the base hostname & protocol for your site
+author: Imran Ahmed
+include: ["_pages"]
+
+# homepage tiles
+tiles-source: pages # accepts "posts" or "pages"
+tiles-count: 6
+
+# social settings
+500px_url:
+facebook_url: https://www.facebook.com/hackbridgeio
+github_url: https://github.com/hackbridge
+gitlab_url: 
+googleplus_url: 
+instagram_url: 
+linkedin_url: 
+pinterest_url:
+slack_url:
+twitter_url:
+medium_url: https://medium.com/hackbridge
+oliverwyman_url: https://oliverwyman.com
+
+# build settings
+markdown: kramdown
+
+sass:
+  style: compressed
