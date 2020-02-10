@@ -1,0 +1,98 @@
+<!-- Wrapper -->
+<div id="wrapper">
+
+<!-- Header -->
+<header id="header"{% if page.layout == "landing" %} class="alt style2"{% endif %}{% if page.layout == "home" %} class="alt"{% endif %}>
+	<a href="{{ "" | absolute_url }}/" class="logo"><strong>{{ site.title }}</strong> <span>{{ site.subtitle }}</span></a>
+	<!--
+	<header class="major">
+		<h4>Powered by</h4>
+	</header>
+
+	<div class="box alt">
+		<div class="row uniform align-center vert-space-large sponsor-banner">
+			<div class="center col-4">
+					<span class="image fit rmb">
+						<img class="size-inherit center" src="assets/images/ef_white_square.png" alt="" />
+					</span>
+			</div>
+			<div class="center col-4">
+					<span class="image fit rmb">
+						<img class="size-inherit center" src="assets/images/qb_white.png" alt="" />
+					</span>
+			</div>
+			<div class="center col-4">
+					<span class="image fit rmb">
+						<img class="size-inherit center" src="assets/images/oliver.jpg" alt="" />
+					</span>
+			</div>
+			-->
+			<!--			<div class="center col-4">-->
+			<!--					<span class="image fit rmb">-->
+			<!--						<img class="img-circle size-inherit center" src="assets/images/qb_white.jpg" alt="" />-->
+			<!--					</span>-->
+			<!--			</div>
+		</div>
+	</div>-->
+
+	<nav>
+
+		<ul class="icons">
+			{% if site.twitter_url %}
+			<li><a href="{{ site.twitter_url }}" class="icon alt fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+			{% endif %}
+			{% if site.googleplus_url %}
+			<li><a href="{{ site.googleplus_url }}" class="icon alt fa-google-plus" target="_blank"><span class="label">Google+</span></a></li>
+			{% endif %}
+			{% if site.facebook_url %}
+			<li><a href="{{ site.facebook_url }}" class="icon alt fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
+			{% endif %}
+			{% if site.instagram_url %}
+			<li><a href="{{ site.instagram_url }}" class="icon alt fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+			{% endif %}
+			{% if site.pinterest_url %}
+			<li><a href="{{ site.pinterest_url }}" class="icon alt fa-pinterest" target="_blank"><span class="label">Pinterest</span></a></li>
+			{% endif %}
+			{% if site.500px_url %}
+			<li><a href="{{ site.500px_url }}" class="icon alt fa-500px" target="_blank"><span class="label">500px</span></a></li>
+			{% endif %}
+			{% if site.gitlab_url %}
+			<li><a href="{{ site.gitlab_url }}" class="icon alt fa-gitlab" target="_blank"><span class="label">GitLab</span></a></li>
+			{% endif %}
+			{% if site.medium_url %}
+			<li><a href="{{ site.medium_url }}" class="icon alt fa-medium" target="_blank"><span class="label">Medium</span></a></li>
+			{% endif %}
+			{% if site.github_url %}
+			<li><a href="{{ site.github_url }}" class="icon alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+			{% endif %}
+			{% if site.slack_url %}
+			<li><a href="{{ site.slack_url }}" class="icon alt fa-slack" target="_blank"><span class="label">Slack</span></a></li>
+			{% endif %}
+			{% if site.linkedin_url %}
+			<li><a href="{{ site.linkedin_url }}" class="icon alt fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+			{% endif %}
+		</ul>
+		<a href="#menu">Menu</a>
+	</nav>
+</header>
+
+<!-- Menu -->
+<nav id="menu">
+	<ul class="links">
+		{% assign nav_pages = site.html_pages | sort: 'nav-order' %}
+        {% for page in nav_pages %}
+		    {% if page.layout == "home" %}
+		        <li><a href="{{ "" | absolute_url }}/">{{ page.title }}</a></li>
+	    	{% endif %}
+		{% endfor %}
+		{% for page in nav_pages %}
+		    {% if page.layout != "home" and page.nav-menu == true %}
+		        <li><a href="{{ page.url | absolute_url }}">{{ page.title }}</a></li>
+		    {% endif %}
+		{% endfor %}
+	</ul>
+	<ul class="actions vertical">
+		<li><a href="#subscribe" class="button special fit">Subscribe</a></li>
+		<!-- <li><a href="support.html" class="button fit">Support Us</a></li> -->
+	</ul>
+</nav>
